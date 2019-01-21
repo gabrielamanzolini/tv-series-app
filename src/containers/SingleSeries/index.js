@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Loader from '../../components/Loader'
+import Loader from '../../components/Loader';
+import './index.css';
 
 class SingleSeries extends Component {
     state = {
@@ -18,7 +19,9 @@ class SingleSeries extends Component {
         const {show} = this.state;
         console.log(show);
         return(
+            
             <div>
+                <a class="btn" href="/">Go Back!</a>
                 {show === null && <Loader/>}
                 {
                     show !== null
