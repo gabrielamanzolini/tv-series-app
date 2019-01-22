@@ -21,7 +21,7 @@ class SingleSeries extends Component {
         return(
             
             <div>
-                <a class="btn" href="/">Go Back!</a>
+                <a className="btn" href="/">Go Back!</a>
                 {show === null && <Loader/>}
                 {
                     show !== null
@@ -34,6 +34,8 @@ class SingleSeries extends Component {
                         <p>
                             <img alt="show" src={show.image.medium}/>
                         </p>
+                        <h1>Summary</h1>
+                        <p>{show.summary}</p>
                     </div>
                 }
             </div>
