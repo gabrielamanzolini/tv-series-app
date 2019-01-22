@@ -17,6 +17,7 @@ class SingleSeries extends Component {
 
     render() {
         const {show} = this.state;
+        const regex = /(<([^>]+)>)/ig;
         console.log(show);
         return(
             
@@ -35,11 +36,12 @@ class SingleSeries extends Component {
                             <img alt="show" src={show.image.medium}/>
                         </p>
                         <h1>Summary</h1>
-                        <p>{show.summary}</p>
+                        <p>{show.summary.replace(regex, '')}</p>
                     </div>
                 }
             </div>
         )
+        
     }
 }
 export default SingleSeries;
