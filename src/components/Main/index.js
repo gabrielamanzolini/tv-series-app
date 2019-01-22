@@ -7,6 +7,7 @@ const Main = props => (
     <Switch>
         <Route exact path="/" component={Series}/>
         <Route path='/series/:id' component={SingleSeries}/>
+        <Route path = '/all-shows'/>
     </Switch>
 )
 
